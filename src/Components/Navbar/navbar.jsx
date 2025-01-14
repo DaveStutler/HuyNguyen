@@ -1,11 +1,11 @@
 import React from "react";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo-transparent.png";
 import './navbar.css';
 
 const Navbar = () => {
   return (
     <div className="navbar">
-      <img src="https://www.docplanner.com/img/logo-default-group-en.svg?v=1" alt="Docplanner Group" />
+      <img src={logo} alt="Huy Nguyen" width={150} height={100}/>
       <ul className="nav-links">
         <li>Home</li>
         <li>About Me</li>
