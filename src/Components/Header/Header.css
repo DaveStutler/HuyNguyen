@@ -1,0 +1,65 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.header img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-top: 150px;
+}
+
+.header h1{
+    text-align: center;
+    width: 50%;
+    font-size: 90px;
+    font-weight: 600;
+}
+
+.header h1 span{
+    background: linear-gradient(270deg, #cf9702  10%, #9a2c05  100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header p{
+    width: 50%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.header-action{
+    display: flex;
+    align-items: center ;
+    gap: 25px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.header-connect{
+    padding: 25px 45px;
+    border-radius: 50px;
+    background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 100%);
+    cursor: pointer;
+}
+
+.header-resume{
+    padding: 25px 45px;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.header-connect:hover{
+    border: 2px solid #fff;
+}
+
+.header-resume:hover{
+    border-color: #DF8908;
+}
