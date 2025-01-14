@@ -1,10 +1,10 @@
 import React from 'react';
-import { defaultClientConditions } from 'vite';
+import Navbar from './Components/Navbar/navbar.jsx';
 
 const App = () => {
   return (
     <div>
- 
+      <Navbar />
     </div>
   );
 }
