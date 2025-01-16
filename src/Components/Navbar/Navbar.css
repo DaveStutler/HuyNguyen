@@ -13,6 +13,15 @@
     font-size: 20px;
 }
 
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-links a:hover {
+    color: #FFC107;
+}
+
 .nav-connect {
     padding: 20px 40px;
     border-radius: 50px;
@@ -26,3 +35,4 @@
     background: linear-gradient(90deg, #FF9800, #FFC107);
     transform: s;
 }
+
