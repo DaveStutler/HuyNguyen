@@ -1,8 +1,8 @@
 import React from "react";
-import "./header.css";
+import "./Header.css";
 import profile_img from "../../assets/profile.png";
 
-const header = () => {
+const Header = () => {
   return (
     <div className="header">
       <img src={profile_img} alt=""/>
@@ -20,4 +20,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;

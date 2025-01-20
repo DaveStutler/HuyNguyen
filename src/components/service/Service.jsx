@@ -1,10 +1,10 @@
 import React from 'react'
-import './service.css'
+import './Service.css'
 import arrow_icon from '../../assets/arrow_icon.png'
 import theme_patttern from '../../assets/theme-patten.png'
 import { services } from '../../assets/data/services.json'
 
-const service = () => {
+const Service = () => {
   return (
     <div>
         <div className="services">
@@ -33,4 +33,4 @@ const service = () => {
   )
 }
 
-export default service
+export default Service

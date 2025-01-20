@@ -1,9 +1,9 @@
 import React from "react";
 import logo from "../../assets/logo-transparent.png";
 import { Link } from "react-router-dom";
-import './navbar.css';
+import './Navbar.css';
 
-const navbar = () => {
+const Navbar = () => {
   return (
     <div className="navbar">
       <img src={logo} alt="Huy Nguyen" width={150} height={100}/>
@@ -18,4 +18,4 @@ const navbar = () => {
   );
 }
 
-export default navbar;
+export default Navbar;

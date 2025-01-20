@@ -1,10 +1,10 @@
 import React from 'react'
-import './body.css'
+import './Body.css'
 import theme_patttern from '../../assets/theme-patten.png'
 import profile_pic from '../../assets/profile.png'
 
 
-const body = () => {
+const Body = () => {
   return (
     <div className='about'>
       <div className="about-title">
@@ -50,4 +50,4 @@ const body = () => {
   )
 }
 
-export default body
+export default Body

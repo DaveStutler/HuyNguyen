@@ -1,14 +1,14 @@
 import React from "react";
-import header from "../components/header/header";
-import body from "../components/body/body";
-import service from "../components/service/service";
+import Header from "../components/header/Header";
+import Body from "../components/body/Body";
+import Service from "../components/service/Service";
 
 const Home = () => {
   return (
     <div>
-        <header />
-        <body />
-        <service />
+        <Header />
+        <Body />
+        <Service />
     </div>
   );
 }
