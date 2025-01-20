@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.css";
+import "./header.css";
 import profile_img from "../../assets/profile.png";
 
 const Header = () => {
@@ -20,4 +20,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default header;

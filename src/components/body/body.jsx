@@ -1,5 +1,5 @@
 import React from 'react'
-import './Body.css'
+import './body.css'
 import theme_patttern from '../../assets/theme-patten.png'
 import profile_pic from '../../assets/profile.png'
 
@@ -50,4 +50,4 @@ const Body = () => {
   )
 }
 
-export default Body
+export default body

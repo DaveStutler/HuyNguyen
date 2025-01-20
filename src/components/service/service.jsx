@@ -1,5 +1,5 @@
 import React from 'react'
-import './Service.css'
+import './service.css'
 import arrow_icon from '../../assets/arrow_icon.png'
 import theme_patttern from '../../assets/theme-patten.png'
 import { services } from '../../assets/data/services.json'
@@ -33,4 +33,4 @@ const Service = () => {
   )
 }
 
-export default Service
+export default service
