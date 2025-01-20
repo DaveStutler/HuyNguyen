@@ -3,9 +3,17 @@ frontend:
   phases:
     preBuild:
       commands:
-        - nvm install 20
-        - nvm use 20
+        - nvm install 23
+        - nvm use 23
         - npm ci --cache .npm --prefer-offline
+        - yarn install
     build:
       commands:
         - npm run build
+    artifacts:
+        baseDirectory: dist
+        files:
+          - '**/*'
+        cache:
+          paths:
+            - node_modules/**/*
