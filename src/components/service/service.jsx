@@ -4,7 +4,7 @@ import arrow_icon from '../../assets/arrow_icon.png'
 import theme_patttern from '../../assets/theme-patten.png'
 import { services } from '../../assets/data/services.json'
 
-const Service = () => {
+const service = () => {
   return (
     <div>
         <div className="services">

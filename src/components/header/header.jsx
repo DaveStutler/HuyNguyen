@@ -2,7 +2,7 @@ import React from "react";
 import "./header.css";
 import profile_img from "../../assets/profile.png";
 
-const Header = () => {
+const header = () => {
   return (
     <div className="header">
       <img src={profile_img} alt=""/>

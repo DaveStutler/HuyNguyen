@@ -4,7 +4,7 @@ import theme_patttern from '../../assets/theme-patten.png'
 import profile_pic from '../../assets/profile.png'
 
 
-const Body = () => {
+const body = () => {
   return (
     <div className='about'>
       <div className="about-title">
