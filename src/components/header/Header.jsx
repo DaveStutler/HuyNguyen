@@ -9,8 +9,8 @@ const Header = () => {
       <h1>I'm Huy Nguyen,<span> graduate student at USC</span></h1>
       <p>
         I am pursuing a Master degree in Computer Science - Game Development at
-        USC. I am inspired full stack developer, learning more about cloud
-        computing and cloud security{" "}
+        USC. I am inspired full stack developer, learning more about game development, 
+        cloud computing, and cloud security.
       </p>
       <div className="header-action">
         <div className="header-connect">Connect With Me</div>
