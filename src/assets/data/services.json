@@ -20,27 +20,6 @@
         "description": "We develop games",
         "price": "$300",
         "link": "https://www.github.com/DaveStutler"
-        },
-        {
-        "id": "04",
-        "name": "Graphic Design",
-        "description": "We design graphics",
-        "price": "$400",
-        "link": "https://www.github.com/DaveStutler"
-        },
-        {
-        "id": "05",
-        "name": "Service 5",
-        "description": "Description 5",
-        "price": "$500",
-        "link": "https://www.github.com/DaveStutler"
-        },
-        {
-        "id": "06",
-        "name": "Service 6",
-        "description": "Description 6",
-        "price": "$600",
-        "link": "https://www.github.com/DaveStutler"
         }
     ]
 }
