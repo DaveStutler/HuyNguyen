@@ -1,0 +1,22 @@
+/* Footer.css */
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Make it take the full viewport height */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    background-color: #222; /* Dark background */
+  }
+  
+  .footer-container a {
+    color: #1e90ff; /* DodgerBlue for links */
+    text-decoration: none;
+  }
+  
+  .footer-container a:hover {
+    text-decoration: underline;
+  }
+  
