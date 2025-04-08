@@ -1,9 +1,10 @@
 import React from "react";
+import Body from "../components/body/Body";
 
 const AboutMe = () => {
   return (
     <div>
-      <h1>About Me</h1>
+      <Body />
     </div>
   );
 };
