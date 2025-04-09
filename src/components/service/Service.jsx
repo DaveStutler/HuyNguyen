@@ -4,6 +4,17 @@ import arrow_icon from '../../assets/arrow_icon.png'
 import theme_patttern from '../../assets/theme-patten.png'
 import { services } from '../../assets/data/services.json'
 
+/**
+ * @summary Service component
+ * @description This component renders the services offered by the user.
+ * It displays the services in a grid format with a title, description, 
+ * and a link to read more.
+ * 
+ * Provide a picture for each service as a preview of the service.
+ * Update the services.json file to include the picture.
+ * @returns {JSX.Element}
+ */
+
 const Service = () => {
   return (
     <div>
