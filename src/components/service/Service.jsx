@@ -2,6 +2,11 @@ import React from 'react'
 import './Service.css'
 import arrow_icon from '../../assets/arrow_icon.png'
 import theme_patttern from '../../assets/theme-patten.png'
+import academic_genealogy_png from '../../assets/services/academic_genealogy.png'
+import portfolio_png from '../../assets/services/portfolio.png'
+import rivalry_clash_png from '../../assets/services/rivalry_clash.png'
+import pirate_in_peril_png from '../../assets/services/pirate_in_peril.png'
+import prosecutor_png from '../../assets/services/prosecutor.png'
 import { services } from '../../assets/data/services.json'
 
 /**
