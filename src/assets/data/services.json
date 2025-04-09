@@ -5,7 +5,7 @@
         "name": "Academic Genealogy Website",
         "description": "A Django-based web application for UC Davis Computer Science, allowing users to view and manage their academic genealogy within the department. The project includes a user-friendly interface (Bootstrap UI), JSON files integration, and scalable infrastructure.",
         "status": "Image Only",
-        "image": "./../services/academic-genealogy.png",
+        "image": "/home/hxnguyen/CodePath/HuyNguyen/src/assets/services/academic-genealogy.png",
         "link": "https://www.github.com/DaveStutler/Academic_Genealogy"
         },
         {
