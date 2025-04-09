@@ -15,33 +15,39 @@ import { services } from '../../assets/data/services.json'
  * @returns {JSX.Element}
  */
 
-const Service = () => {
-  return (
-    <div>
+const Services = () => {
+    return (
         <div className="services">
             <div className="service-title">
-                <h1>My Services</h1>
-                <img src={theme_patttern} alt="" />
+                <h1>Our Projects & Services</h1>
+                {/* You can include a header image if desired */}
+                <img src="assets/header-image.jpg" alt="Projects Preview" />
             </div>
             <div className="service-container">
-                {services.map((service, index) => {
-                    return (
-                        <div key={index} className="services-format">
-                            <h3>{service.id}</h3>
-                            <h2>{service.name}</h2>
-                            <h2>{service.price}</h2>
-                            <p>{service.description}</p>
-                            <div className="services-readmore">
-                                <img src={arrow_icon} alt="arrow" />
-                                <a href={service.link}>Read More</a>
-                            </div>
+                {servicesData.services.map((service) => (
+                    <div className="services-format" key={service.id}>
+                        <img
+                            src={service.image}
+                            alt={service.name}
+                            className="service-image"
+                        />
+                        <h2>{service.name}</h2>
+                        <p>{service.description}</p>
+                        <p><strong>Status:</strong> {service.status}</p>
+                        <div className="services-readmore">
+                            <a
+                                href={service.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                See More
+                            </a>
                         </div>
-                    );
-                })}
+                    </div>
+                ))}
             </div>
         </div>
-    </div>
-  )
-}
+    );
+};
 
 export default Service
