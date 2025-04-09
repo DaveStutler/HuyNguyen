@@ -15,28 +15,33 @@ import { services } from '../../assets/data/services.json'
  * @returns {JSX.Element}
  */
 
-const Services = () => {
+const Service = () => {
     return (
         <div className="services">
             <div className="service-title">
                 <h1>Our Projects & Services</h1>
                 {/* You can include a header image if desired */}
-                <img src="assets/header-image.jpg" alt="Projects Preview" />
+                <img src= {theme_patttern} alt="Projects Preview" />
             </div>
             <div className="service-container">
-                {servicesData.services.map((service) => (
-                    <div className="services-format" key={service.id}>
+                {services.map((services) => (
+                    <div className="services-format" key={services.id}>
                         <img
-                            src={service.image}
-                            alt={service.name}
+                            src={services.image}
+                            alt={services.name}
                             className="service-image"
                         />
-                        <h2>{service.name}</h2>
-                        <p>{service.description}</p>
-                        <p><strong>Status:</strong> {service.status}</p>
+                        <h2>{services.name}</h2>
+                        <p>{services.description}</p>
+                        <p><strong>Status:</strong> {services.status}</p>
                         <div className="services-readmore">
+                            <img
+                                src={arrow_icon}
+                                alt="arrow"
+                                className="arrow-icon"
+                            />
                             <a
-                                href={service.link}
+                                href={services.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
