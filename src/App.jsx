@@ -6,6 +6,16 @@ import AboutMe from './pages/AboutMe.jsx';
 import Porfolio from './pages/Porfolio.jsx';
 import Contact from './pages/Contact.jsx';
 
+/**
+ * @summary Main App component
+ * @description This component is the main entry point of the application. 
+ * It sets up the routing for the application using React Router.
+ * It defines the main layout and the different routes for the application.
+ * Instead of using this approach, figure out a way to keep the pages on 1 page.
+ * The route would just lead to the section of the page instead of a new page.
+ * @returns {JSX.Element}
+ */
+
 const App = () => {
   return (
     <div>

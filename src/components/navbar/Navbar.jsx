@@ -3,6 +3,18 @@ import logo from "../../assets/logo-transparent.png";
 import { Link } from "react-router-dom";
 import './Navbar.css';
 
+/**
+ * @summary Navbar component
+ * @description This component renders the navigation bar of the application.
+ * It contains the logo and the navigation links to different sections of the application.
+ * It uses React Router's Link component for navigation.
+ * Figure out a way to keep the pages on 1 page. The route would just lead to 
+ * the section of the page instead of a new page.
+ * 
+ * Also make the navbar mobile responsive.
+ * @returns {JSX.Element}
+ */
+
 const Navbar = () => {
   return (
     <div className="navbar">
@@ -13,7 +25,6 @@ const Navbar = () => {
         <li><Link to='/porfolio'>Porfolio</Link></li>
         <li><Link to='/contact'>Contact</Link></li>
       </ul>
-      <div className="nav-connect">Connect With Me</div>
     </div>
   );
 }

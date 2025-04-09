@@ -13,7 +13,6 @@ const Header = () => {
         cloud computing, and cloud security.
       </p>
       <div className="header-action">
-        <div className="header-connect">Connect With Me</div>
         <div className="header-resume">My Resume</div>
       </div>
     </div>
