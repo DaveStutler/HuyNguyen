@@ -21,7 +21,7 @@
         "name": "Rivalry Clash",
         "description": "A Real Time Strategy game built using Unity. The project is designed to be played on desktop, coming soon to mobile. The game features a user-friendly interface, and is designed to be scalable for future updates.",
         "status": "In Development Progress",
-        "image": "../services/rivalry-clash.png",
+        "image": "src/assets/services/academic-genealogy.png",
         "link": "https://www.github.com/DaveStutler/Rivalry-Clash"
         },
         {
