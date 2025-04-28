@@ -1,45 +1,86 @@
 {
-    "services": [
-        {
-        "id": "01",
-        "name": "Academic Genealogy Website",
-        "description": "A Django-based web application for UC Davis Computer Science, allowing users to view and manage their academic genealogy within the department. The project includes a user-friendly interface (Bootstrap UI), JSON files integration, and scalable infrastructure.",
-        "status": "Image Only",
-        "image": "/services/academic-genealogy.png",
-        "link": "https://www.github.com/DaveStutler/Academic_Genealogy"
-        },
-        {
-        "id": "02",
-        "name": "Personal Portfolio Website",
-        "description": "A personal portfolio website showcasing my projects and skills. The project is built using React, and is hosted on AWS Amplify and Github page. The website is designed to be responsive for mobile and desktop and user-friendly, with a focus on AWS infrastructure and AWS scalability.",
-        "status": "Link Available",
-        "image": "../services/portfolio.png",
-        "link": "https://master.d1js5qcsr9ejez.amplifyapp.com/"
-        },
-        {
-        "id": "03",
-        "name": "Rivalry Clash",
-        "description": "A Real Time Strategy game built using Unity. The project is designed to be played on desktop, coming soon to mobile. The game features a user-friendly interface, and is designed to be scalable for future updates.",
-        "status": "In Development Progress",
-        "image": "src/assets/services/academic-genealogy.png",
-        "link": "https://www.github.com/DaveStutler/Rivalry-Clash"
-        },
-        {
-        "id": "04",
-        "name": "Pirates in Peril",
-        "description": "A 2D platformer game built using Unity. The project is designed to be played on desktop, and features a user-friendly interface, and is designed to be with multiple players. The game is my first game project, aiming to learn the basics of Unity and game development.",
-        "status": "Link Available",
-        "image": "../services/pirates-in-peril.png",
-        "link": "https://www.github.com/DaveStutler/ProjectD.K"
-        },
-        {
-        "id": "05",
-        "name": "Prosecutor",
-        "description": "PROSECUTOR is a isometric investigative game where players take on the role of a prosecutor, gathering evidence and interviewing witnesses to build a case against a suspect. The game is still in development pitch, and is designed to be played on desktop.",
-        "status": "Image Only",
-        "image": "../services/prosecutor.png",
-        "link": "https://www.canva.com/design/DAGgTSAOszc/-zsBEcvK5FKPCGsf1kaKpA/view?utm_content=DAGgTSAOszc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h2ca85a0205"
-        }
-    ]
-}
-
+        "services": [
+            {
+            "id": "01",
+            "name": "Academic Genealogy Website",
+            "description": "A Django-based web application for UC Davis Computer Science, allowing users to view and manage their academic genealogy within the department. The project includes a user-friendly interface (Bootstrap UI), JSON files integration, and scalable infrastructure.",
+            "status": "Image Only",
+            "image": "../services/academic-genealogy.png",
+            "link": "https://www.github.com/DaveStutler/Academic_Genealogy"
+            },
+            {
+            "id": "02",
+            "name": "Personal Portfolio Website",
+            "description": "A personal portfolio website showcasing my projects and skills. The project is built using React, and is hosted on AWS Amplify and Github page. The website is designed to be responsive for mobile and desktop and user-friendly, with a focus on AWS infrastructure and AWS scalability.",
+            "status": "Link Available",
+            "image": "../services/portfolio.png",
+            "link": "https://master.d1js5qcsr9ejez.amplifyapp.com/"
+            },
+            {
+            "id": "03",
+            "name": "Rivalry Clash",
+            "description": "A Real Time Strategy game built using Unity. The project is designed to be played on desktop, coming soon to mobile. The game features a user-friendly interface, and is designed to be scalable for future updates.",
+            "status": "In Development Progress",
+            "image": "../services/rivalry-clash.png",
+            "link": "https://www.github.com/DaveStutler/Rivalry-Clash"
+            },
+            {
+            "id": "04",
+            "name": "Pirates in Peril",
+            "description": "A 2D platformer game built using Unity. The project is designed to be played on desktop, and features a user-friendly interface, and is designed to be with multiple players. The game is my first game project, aiming to learn the basics of Unity and game development.",
+            "status": "GitHub Link",
+            "image": "../services/pirates-in-peril.png",
+            "link": "https://www.github.com/DaveStutler/ProjectD.K"
+            },
+            {
+            "id": "05",
+            "name": "Prosecutor",
+            "description": "PROSECUTOR is a isometric investigative game where players take on the role of a prosecutor, gathering evidence and interviewing witnesses to build a case against a suspect. The game is still in development pitch, and is designed to be played on desktop.",
+            "status": "Image Only",
+            "image": "../services/prosecutor.png",
+            "link": "https://www.canva.com/design/DAGgTSAOszc/-zsBEcvK5FKPCGsf1kaKpA/view?utm_content=DAGgTSAOszc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h2ca85a0205"
+            },
+            {
+            "id": "06",
+            "name": "Gorilla Getaway",
+            "description": "Gorilla Getaway is a 2D board game. The project is designed to be played on desktop, and features a user-friendly interface, and is designed to be with multiple players. The game is my first game project, aiming to learn the basics of Unity and game development.",
+            "status": "Google Drive Link",
+            "image": "../services/gorilla-getaway.png",
+            "link": "https://drive.google.com/drive/folders/1Xf9FyrGXZwM9_vJ-MOedamLso813Q3Re?usp=sharing"
+            },
+            {
+            "id": "07",
+            "name": "The Cursed Verdant",
+            "description": "The Cursed Verdant is a 2D board game. The project is designed to be played on desktop, and features a user-friendly interface, and is designed to be with multiple players. The game is my first game project, aiming to learn the basics of Unity and game development.",
+            "status": "Google Drive Link",
+            "image": "../services/the-cursed-verdant.png",
+            "link": "https://drive.google.com/drive/folders/1nuHtm_fGusUHFs1oew4vej7tX-isZbFw?usp=sharing"
+            },
+            {
+            "id": "08",
+            "name": "Particle Collider Data Analysis",
+            "description": "A data analysis project using Python and Pandas to analyze particle collider data. The project includes data cleaning, visualization, and statistical analysis.",
+            "status": "GitHub Link",
+            "image": "../services/particle-collider.png",
+            "link": "https://www.github.com/DaveStutler/G9"
+            }, 
+            {
+            "id": "09",
+            "name": "P.O.M.D.P AGENT SIMULATOR",
+            "description": "A simulation project using Python and Pygame to simulate the behavior of a P.O.M.D.P agent. The project includes data visualization and statistical analysis.",
+            "status": "GitHub Link",
+            "image": "../services/pomdp.png",
+            "link": "https://www.github.com/DaveStutler/POMDP"
+            },
+            {
+            "id": "10",
+            "name": "GENETIC ALGORITHM - TRAVELING SALESMAN PROBLEM (TSP)",
+            "description": "A simulation project using Python and Pygame to simulate the behavior of a genetic algorithm to solve the traveling salesman problem. The project includes data visualization and statistical analysis.",
+            "status": "GitHub Link",
+            "image": "../services/tsp.png",
+            "link": "https://www.github.com/DaveStutler/TSP"
+            }
+        ]
+    }
+    
+    
