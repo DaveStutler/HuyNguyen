@@ -11,7 +11,7 @@ import { services } from '../../assets/data/services.json'
  * and a link to read more.
  * 
  * Provide a picture for each service as a preview of the service.
- * Update the services.json file to include the picture.
+ * Update the services.json file to include the picture. 
  * @returns {JSX.Element}
  */
 
