@@ -1,7 +1,7 @@
 import React from 'react'
 import './Body.css'
 import theme_patttern from '../../assets/theme-patten.png'
-import profile_pic from '../../assets/profile.png'
+import profile_pic from '../../assets/profilePic.jpg'
 
 
 const Body = () => {
