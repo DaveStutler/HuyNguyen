@@ -19,7 +19,7 @@ const Service = () => {
     return (
         <div className="services">
             <div className="service-title">
-                <h1>Our Projects & Services</h1>
+                <h1>Projects</h1>
                 {/* You can include a header image if desired */}
                 <img src= {theme_patttern} alt="Projects Preview" />
             </div>
