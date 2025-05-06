@@ -5,7 +5,8 @@ import Home from './pages/Home.jsx';
 import AboutMe from './pages/AboutMe.jsx';
 import Porfolio from './pages/Porfolio.jsx';
 import Contact from './pages/Contact.jsx';
-
+import Projects from './components/service/Projects.jsx';
+import Description from './components/service/Description.jsx';
 /**
  * @summary Main App component
  * @description This component is the main entry point of the application. 
@@ -26,6 +27,9 @@ const App = () => {
             <Route path='about' element={<AboutMe />} />
             <Route path='porfolio' element={<Porfolio />} />
             <Route path='contact' element={<Contact />} />
+            <Route path='projects' element={<Projects />} />
+            <Route path='/projects/:projectName' element={<Description />} />
+            {/* Add more routes as needed */} 
             <Route path='*' element={<h1>Not Found</h1>} />
           </Route>
         </Routes>

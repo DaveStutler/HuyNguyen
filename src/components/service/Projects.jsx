@@ -3,6 +3,7 @@ import './Projects.css'
 import arrow_icon from '../../assets/arrow_icon.png'
 import theme_patttern from '../../assets/theme-patten.png'
 import { projects } from '../../assets/data/projects.json'
+import { Link } from 'react-router-dom'
 
 /**
  * @summary Service component
@@ -14,6 +15,10 @@ import { projects } from '../../assets/data/projects.json'
  * Update the projects.json file to include the picture. 
  * @returns {JSX.Element}
  */
+
+const slugify = (text) =>
+    text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+
 
 const Projects = () => {
     return (
@@ -32,7 +37,7 @@ const Projects = () => {
                             className="project-image"
                         />
                         <h2>{project.name}</h2>
-                        <p>{project.description}</p>
+                        <p>{project.preview}</p>
                         <p><strong>Status:</strong> {project.status}</p>
                         <div className="projects-readmore">
                             <img
@@ -40,13 +45,9 @@ const Projects = () => {
                                 alt="arrow"
                                 className="arrow-icon"
                             />
-                            <a
-                                href={project.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                See More
-                            </a>
+                            <Link to={`/projects/${slugify(project.name)}`} className="read-more-link">
+                                Read More
+                            </Link>
                         </div>
                     </div>
                 ))}

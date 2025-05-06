@@ -1,9 +1,12 @@
 import React from "react";
+import Projects from "../components/service/Projects";
+import Description from "../components/service/Description";
+
 
 const Porfolio = () => {
   return (
     <div>
-      <h1>Portfolio</h1>
+      <Projects />
     </div>
   );
 }
