@@ -10,13 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.1.5",
     "@tailwindcss/vite": "^4.1.5",
     "aws-amplify": "^6.13.6",
     "react": "^18.3.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^7.1.2",
-    "tailwindcss": "^4.1.5"
+    "react-router-dom": "^7.1.2"
   },
   "devDependencies": {
     "@aws-amplify/backend": "^1.14.3",
@@ -25,6 +25,7 @@
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.21",
     "aws-cdk": "^2.1003.0",
     "aws-cdk-lib": "^2.180.0",
     "constructs": "^10.4.2",
@@ -35,6 +36,8 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.5",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2",
     "vite": "^6.0.5"
