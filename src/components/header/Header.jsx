@@ -1,21 +1,27 @@
 import React from "react";
-import "./Header.css";
 import profile_img from "../../assets/profilePic.jpg";
 
-const Header = () => {
+const Header = ({scrollToProjects}) => { 
+
   return (
-    <div className="header">
-      <img src={profile_img} alt=""/>
-      <h1>I'm Huy Nguyen,<span> graduate student at USC</span></h1>
-      <p>
-        I am pursuing a Master degree in Computer Science - Game Development at
-        USC. I am inspired full stack developer, learning more about game development, 
-        cloud computing, and cloud security.
-      </p>
-      <div className="header-action">
-        <div className="header-resume">My Resume</div>
+    <div className="hero min-h-screen bg-base-200">
+      <div className="hero-content flex-col lg:flex-row gap-10">
+        <img
+          src={profile_img}
+          alt="Profile"
+          className="max-w-3xl rounded-xl shadow-2xl lb:mr-10"
+        />
+        <div className="max-w-md">
+          <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+          <p className="mb-5 text-2xl">
+            I'm Huy, currently pursuing a Master's degree in Computer Science - Game Development at USC, 
+            with a passion for <strong> Game Development, Full-stack Development,</strong> and<strong> Cloud Network Computing</strong>.
+          </p>
+          <button className="btn btn-secondary btn-xl rounded-2xl" onClick={scrollToProjects}>My Projects</button>
+        </div>
       </div>
     </div>
+
   );
 };
 
