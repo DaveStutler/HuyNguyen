@@ -8,7 +8,7 @@ const Body = () => {
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col">
         <img
-          src="/src/assets/profilePic2.jpg"
+          src="/profilePic2.jpg"
           className="max-w-xl rounded-4xl shadow-2xl"
         />
         <div>
