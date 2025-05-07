@@ -1,52 +1,33 @@
 import React from 'react'
 import './Body.css'
-import theme_patttern from '../../assets/theme-patten.png'
-import profile_pic from '../../assets/profilePic.jpg'
 
 
 const Body = () => {
   return (
-    <div className='about'>
-      <div className="about-title">
-        <h1>About Me</h1>
-        <img src={theme_patttern} alt="" />
-      </div>
-      <div className="about-sections">
-        <div className="about-left">
-          <img src={profile_pic} alt="" />
-        </div>
-        <div className="about-right">
-          <div className="about-para">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              ac ante mollis, fermentum felis nec, tincidunt purus. Donec
-            </p>
-          </div>
-          <div className="about-skills">
-            <div className="about-skill"><p>HTML & CSS</p><hr style={{width:"50%"}}/></div>
-            <div className="about-skill"><p>React JS</p><hr style={{width:"70%"}}/></div>
-            <div className="about-skill"><p>Python</p><hr style={{width:"60%"}}/></div>
-            <div className="about-skill"><p>C & C++</p><hr style={{width:"50%"}}/></div>
-          </div>
-        </div>
-      </div>
-      <div className="about-achievements">
-        <div className="about-achievement">
-          <h1>10+</h1>
-          <p>YEARS OF EXPERIENCE</p>
-        </div>
-        <hr />
-        <div className="about-achievement">
-          <h1>10+</h1>
-          <p>PROJECTS COMPLETED</p>
-        </div>
-        <hr />
-        <div className="about-achievement">
-          <h1>15+</h1>
-          <p>CLIENTS</p>
+    // hero section
+    <div className="hero bg-base-200 min-h-screen">
+      <div className="hero-content flex-col">
+        <img
+          src="/src/assets/profilePic2.jpg"
+          className="max-w-xl rounded-4xl shadow-2xl"
+        />
+        <div>
+          <h1 className="text-5xl font-bold">Hello there!</h1>
+          <p className="py-6 text-2xl">
+            I'm a Master's student in Computer Science (Game Development) at the
+            University of Southern California, with a strong foundation in
+            software engineering, AI, and interactive media. My experience spans
+            from gameplay system design for 2D and 3D, gameplay animation, level design, UI/UX design to
+            full-stack web development, and simulation and testing tools for automotive research.
+            Passionate about building meaningful digital experiences, I combine
+            technical expertise with creative problem-solving to deliver polished,
+            user-focused solutions.
+          </p>
         </div>
       </div>
     </div>
+
+
   )
 }
 
