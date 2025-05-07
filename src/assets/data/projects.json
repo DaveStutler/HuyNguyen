@@ -3,34 +3,171 @@
         {
         "id": "01",
         "name": "Academic Genealogy Website",
-        "description": "A Django-based web application for UC Davis Computer Science, allowing users to view and manage their academic genealogy within the department. The project includes a user-friendly interface (Bootstrap UI), JSON files integration, and scalable infrastructure.",
-        "status": "Image Only",
-        "image": "./services/AcademicGenealogy.gif",
-        "link": "https://www.github.com/DaveStutler/Academic_Genealogy"
+        "preview": "A Django-based web app to visualize academic lineage within UC Davis Computer Science.",
+        "description": "This full-stack Django web application enables users to explore academic lineages of the UC Davis Computer Science department. It integrates CAS authentication, supports JSON data imports for genealogy trees, and is hosted on Render with scalable infrastructure. Designed for usability and future expansion, the platform offers visualized tree-based navigation and administrative tools for editing academic relationships.",
+        "status": "Website Available",
+        "image": "/services/AcademicGenealogy.gif",
+        "link": "https://academic-genealogy.onrender.com",
+        "github": "https://www.github.com/DaveStutler/Academic_Genealogy",
+        "tags": ["Django", "Bootstrap", "JSON", "Web Development"],
+        "startDate": "2024-01-01",
+        "endDate": "2024-06-01",
+        "contributors": [
+            {
+                "contributor": "Huy Nguyen",
+                "role": "Project Manager, Communication/Contact manager"
+            },
+            {
+                "contributor": "Henry Wong",
+                "role": "Minutes Manager"
+            },
+            {
+                "contributor": "Alex Kogan",
+                "role": "Configuration Manager"
+            },
+            {
+                "contributor": "Kevin Xu",
+                "role": "Repository Manager"
+            },
+            {
+                "contributor": "Christopher Nitta",
+                "role": "UC Davis CS Department faculty member, Project Administrator"
+            },
+            {
+                "contributor": "Ujwal Pratap Krishna Kaluvakolanu Thyagarajan",
+                "role": "Project Advisor"
+            }
+        ],
+        "technologies": ["Django", "Python", "Bootstrap", "JSON", "HTML", "CSS"]
         },
         {
         "id": "02",
         "name": "Rivalry Clash",
-        "description": "A Real Time Strategy game built using Unity. The project is designed to be played on desktop, coming soon to mobile. The game features a user-friendly interface, and is designed to be scalable for future updates.",
-        "status": "In Development Progress",
-        "image": "./services/RivalryClash.gif",
-        "link": "https://www.github.com/DaveStutler/Rivalry-Clash"
+        "preview": "A 2D real-time strategy game featuring multiplayer battles and minion deployment.",
+        "description": "Rivalry Clash is a 1v1 online multiplayer RTS game built in Unity. Players deploy units in real-time to destroy the opponent’s tower while managing gold resources, unit types, and battlefield strategies. Features include drag-and-drop spawning, animated UI panels, victory/defeat detection, and a colorful aesthetic inspired by Clash Royale. Developed with networked multiplayer support and scalable UI architecture for mobile expansion.",
+        "status": "Coming to itch.io",
+        "image": "/services/RivalryClash.gif",
+        "link": "https://davestutler.itch.io/",
+        "github": "https://www.github.com/DaveStutler/Rivalry-Clash",
+        "tags": ["Unity", "Game Development", "Real Time Strategy", "1vs1"],
+        "startDate": "2025-01-01",
+        "endDate": "2025-05-01",
+        "contributors": [
+            {
+                "contributor": "Huy Nguyen",
+                "role": "Lead Game Designer"
+            },
+            {
+                "contributor": "Wenqiao Wang",
+                "role": "Game Designer"
+            },
+            {
+                "contributor": "Jackson Smith",
+                "role": "Music Producer"
+            },
+            {
+                "contributor": "Matthew Bennett",
+                "role": "Composer"
+            },
+            {
+                "contributor": "Jade Morales",
+                "role": "SFX artist"
+            },
+            {
+                "contributor": "Aidan Yik To Ho",
+                "role": "SFX artist"
+            }
+        ],
+        "technologies": ["Unity", "C#", "Multiplayer Networking", "Perforce"]
         },
         {
         "id": "03",
         "name": "Pirates in Peril",
-        "description": "A 2D platformer game built using Unity. The project is designed to be played on desktop, and features a user-friendly interface, and is designed to be with multiple players. The game is my first game project, aiming to learn the basics of Unity and game development.",
-        "status": "Link Available",
-        "image": "./services/PiratesInPeril.gif",
-        "link": "https://www.github.com/DaveStutler/ProjectD.K"
+        "preview": "A 2D local multiplayer puzzle platformer where 3 pirates escape a trap-filled prison.",
+        "description": "Pirates in Peril is a 2D offline multiplayer game in Unity where up to 3 players control pirates with unique abilities—dash, size shift, or speed—to solve environmental puzzles and escape each level. Designed around cooperation and betrayal, the game emphasizes replayability, platforming mechanics, and character specialization. It was built to explore Unity’s multiplayer systems, animation, and level design.",
+        "status": "Coming to itch.io, built available on Github",
+        "image": "/services/PiratesInPeril.gif",
+        "link": "https://davestutler.itch.io/",
+        "github": "https://www.github.com/DaveStutler/ProjectD.K",
+        "tags": ["Unity", "Game Development", "2D Platformer", "Puzzle Design"],
+        "startDate": "2023-03-01",
+        "endDate": "2023-07-01",
+        "contributors": [
+            {
+                "contributor": "Huy Nguyen",
+                "role": "Animation and Characters Visuals, Press Kit and Trailer"
+            },
+            {
+                "contributor": "Yingyu Gu (Yukki)",
+                "role": "User Interface, Game Feel"
+            },
+            {
+                "contributor": "Zahira Ghazali",
+                "role": "Movement/Level Design, Narrative Design"
+            },
+            {
+                "contributor": "Yingchen Gu (Sammi)",
+                "role": "Game Logic/Game Feel, Audio Programmer"
+            },
+            {
+                "contributor": "Kaylie Lam",
+                "role": "Game Logic, QA Testing"
+            }
+        ],
+        "technologies": ["Unity", "C#", "Multiplayer Networking"]
         },
         {
         "id": "04",
         "name": "Prosecutor",
+        "preview": "An isometric narrative game where players solve cases through logic and clues.",
         "description": "PROSECUTOR is a isometric investigative game where players take on the role of a prosecutor, gathering evidence and interviewing witnesses to build a case against a suspect. The game is still in development pitch, and is designed to be played on desktop.",
-        "status": "Image Only",
-        "image": "./services/prosecutor.png",
-        "link": "https://www.canva.com/design/DAGgTSAOszc/-zsBEcvK5FKPCGsf1kaKpA/view?utm_content=DAGgTSAOszc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h2ca85a0205"
+        "status": "Canva Link",
+        "image": "/services/prosecutor.png",
+        "link": "https://www.canva.com/design/DAGgTSAOszc/-zsBEcvK5FKPCGsf1kaKpA/view?utm_content=DAGgTSAOszc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h2ca85a0205",
+        "github": "",
+        "tags": ["Game Development", "Isometric", "Investigative game"],
+        "startDate": "2023-04-01",
+        "endDate": "2023-09-01",
+        "contributors": [
+            {
+                "contributor": "Huy Nguyen",
+                "role": "Lead Developer"
+            }
+        ],
+        "technologies": ["Unity", "C#", "Unreal Engine"]
+        },
+        {
+        "id": "05",
+        "name": "Gorilla Getaway",
+        "preview": "A competitive 1v1 board game where players outwit a rampaging gorilla.", 
+        "description": "Gorilla Getaway is a 1v1 board game inspired by escape and survival mechanics. One player controls a zoo keeper trying to trap the opponent, while the other plays a gorilla trying to  escape the zoo. The game features action planning and environmental manipulation on a hexagonal tiles board. Designed as a physical tabletop prototype with distinct win conditions and replayable setups.",
+        "status": "Board Game concept available",
+        "image": "/services/gorillaGetaway.png",
+        "link": "https://drive.google.com/file/d/1iLAjHPq6EEj5_sNT02djXRfvG4tNMdwB/view?usp=sharing",
+        "github": "https://drive.google.com/file/d/1bzXamzbT8PQQGSnMwxhwS4DtEQqcF4-m/view?usp=sharing",
+        "tags": ["Game Design", "Board Game"],
+        "startDate": "2024-04-01",
+        "endDate": "2023-04-15",
+        "contributors": [
+            {
+                "contributor": "Huy Nguyen",
+                "role": "QA Tester, Game Designer"
+            },
+            {
+                "contributor": "Bennett Christofferson",
+                "role": "Producer, Game Designer"
+            },
+            {
+                "contributor": "Kyle Caldwell",
+                "role": "Lead Game Designer"
+            },
+            {
+                "contributor": "Issac Rodriguez",
+                "role": "Game Artist, Game Designer"
+            }
+
+        ],
+        "technologies": ["Canva", "Google Workspace"]
         }
     ]
 }
