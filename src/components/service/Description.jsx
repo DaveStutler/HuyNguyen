@@ -1,69 +1,89 @@
 import React from "react";
-import "./Description.css"; // Assuming you have a CSS file for styling
 import { useParams } from "react-router-dom";
 import { projects } from "../../assets/data/projects.json";
-// This component is designed to display detailed information about a project.
-
 
 const slugify = (text) =>
-    text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+  text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 
 const Description = () => {
-    const { projectName } = useParams();
-    const project = projects.find((project) =>slugify(project.name) === projectName);
+  const { projectName } = useParams();
+  const project = projects.find(
+    (project) => slugify(project.name) === projectName
+  );
 
-    if (!project) return <div>Project not found</div>;
+  if (!project) return <div className="text-center text-lg">🚫 Project not found</div>;
 
-    
+  return (
+    <div className="flex justify-center px-4 py-10">
+      <div className="card bg-base-100 w-full max-w-4xl shadow-xl">
+        <figure>
+          <img src={project.image} alt={project.name} className="object-cover" />
+        </figure>
+        <div className="card-body space-y-4">
+          <h2 className="card-title text-3xl font-bold">
+            {project.name}
+            <div className="badge badge-secondary">{project.status}</div>
+          </h2>
 
+          <p className="text-base">{project.description}</p>
 
-    return (
-        <div className="project-description">
-            <h2 className="text-3xl font-bold underline">{project.name}</h2>
-            <p>{project.description}</p>
-            <p><strong>Status:</strong> {project.status}</p>
-            <div className="project-links">
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
-                    View Project
-                </a>
-                {project.github && (
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        View Code
-                    </a>
-                )}
-            </div>
-            <div className="project-image">
-                <img src={project.image} alt={project.name} />
-            </div>
-            <div className="project-tags">
-                {project.tags.map((tag, index) => (
-                    <span key={index} className="project-tag">
-                        {tag}
-                    </span>
-                ))}
-            </div>
-            <div className="project-date">
-                <p><strong>Start Date:</strong> {project.startDate}</p>
-                <p><strong>End Date:</strong> {project.endDate}</p>
-            </div>
-            <div className="project-contributors">
-                <p><strong>Contributors:</strong></p>
-                <ul>
-                    {project.contributors.map((contributor, index) => (
-                        <li key={index}>{contributor.contributor} - {contributor.role}</li>
-                    ))}
-                </ul>
-            </div>
-            <div className="project-technologies">
-                <p><strong>technologies:</strong></p>
-                <ul>
-                    {project.technologies.map((technology, index) => (
-                        <li key={index}>{technology}</li>
-                    ))}
-                </ul>
-            </div>
+          {/* Date Badges */}
+          <div className="flex flex-wrap gap-2">
+            <div className="badge badge-outline">Start: {project.startDate}</div>
+            <div className="badge badge-outline">End: {project.endDate}</div>
+          </div>
+
+          {/* Technology Badges */}
+          <div className="flex flex-wrap gap-2">
+            {project.technologies.map((tech, idx) => (
+              <div key={idx} className="badge badge-primary">{tech}</div>
+            ))}
+          </div>
+
+          {/* Tag Badges */}
+          <div className="flex flex-wrap gap-2">
+            {project.tags.map((tag, idx) => (
+              <div key={idx} className="badge badge-accent">{tag}</div>
+            ))}
+          </div>
+
+          {/* Contributors */}
+          <div className="border-t pt-4 space-y-1">
+            <p className="font-semibold">Contributors:</p>
+            <ul className="list-disc list-inside">
+              {project.contributors.map((c, idx) => (
+                <li key={idx}>
+                  <span className="font-medium">{c.contributor}</span> – {c.role}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Buttons */}
+          <div className="card-actions justify-end mt-4">
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
+              View Project
+            </a>
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline"
+              >
+                View Code
+              </a>
+            )}
+          </div>
         </div>
-    );
-}
+      </div>
+    </div>
+  );
+};
+
 export default Description;
-// This component is designed to display detailed information about a project.
