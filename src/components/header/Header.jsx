@@ -17,7 +17,7 @@ const Header = ({scrollToProjects}) => {
             I'm Huy, currently pursuing a Master's degree in Computer Science - Game Development at USC, 
             with a passion for <strong> Game Development, Full-stack Development,</strong> and<strong> Cloud Network Computing</strong>.
           </p>
-          <button className="btn btn-secondary btn-xl rounded-2xl" onClick={scrollToProjects}>My Projects</button>
+          <button className="btn btn-accent btn-xl rounded-2xl" onClick={scrollToProjects}>My Projects</button>
         </div>
       </div>
     </div>
