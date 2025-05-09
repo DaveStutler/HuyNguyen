@@ -9,7 +9,7 @@ const Header = ({scrollToProjects}) => {
         <img
           src={profile_img}
           alt="Profile"
-          className="max-w-3xl rounded-xl shadow-2xl lb:mr-10"
+          className="max-w-xl rounded-xl shadow-2xl lb:mr-10"
         />
         <div className="max-w-md">
           <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
