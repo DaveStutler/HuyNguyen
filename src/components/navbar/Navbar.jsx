@@ -28,6 +28,7 @@ const Navbar = () => {
       const query = searchValue.toLowerCase().trim();
       if (!query) return;
 
+      // query shouldn't match with anything other than the name of the project
       const match = projects.find((project) =>
         project.name.toLowerCase().includes(query)
         // || project.description.toLowerCase().includes(query)
@@ -45,8 +46,9 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-base-100 shadow-sm">
-      <div className="navbar-start gap-6">
+    <div className="navbar bg-base-100 shadow-sm md:flex-nowrap">
+      {/* Mobile menu Icon, Desktop Menu */}
+      <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
@@ -60,7 +62,17 @@ const Navbar = () => {
             <li><Link to='/contact'>Contact</Link></li>
           </ul>
         </div>
-        <label className="flex cursor-pointer gap-2">
+      </div>
+
+      {/* Center Logo */}
+      <div className="navbar-center justify-center md:w-auto">
+        <a className="btn btn-ghost text-2xl"><Link to='/'>Huy Nguyen</Link></a>
+      </div>
+
+
+      {/* Search and Theme */}
+      <div className="navbar-end justify-end">
+        <label className="flex cursor-pointer gap-2 mr-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -89,33 +101,26 @@ const Navbar = () => {
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </label>
-      </div>
-      <div className="navbar-center">
-        <a className="btn btn-ghost text-2xl"><Link to='/'>Huy Nguyen</Link></a>
-      </div>
-      <div className="navbar-end">
-        <label className="input input-lg">
-          <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <g
-              strokeLinejoin="round"
-              strokeLinecap="round"
-              strokeWidth="2.5"
-              fill="none"
-              stroke="currentColor"
-            >
-              <circle cx="11" cy="11" r="8"></circle>
-              <path d="m21 21-4.3-4.3"></path>
-            </g>
-          </svg>
-          <input
-            type="search"
-            required
-            placeholder="Search for projects"
-            value={searchValue}
-            onChange={(e) => setSearchValue(e.target.value)}
-            onKeyDown={handleSearch}
-          />
-        </label>
+
+        {/* Search menu */}
+        <div className="hidden md:block">
+          <label className="input input-lg">
+            <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </g>
+            </svg>
+            <input
+              type="search"
+              required
+              placeholder="Search for projects"
+              value={searchValue}
+              onChange={(e) => setSearchValue(e.target.value)}
+              onKeyDown={handleSearch}
+            />
+          </label>
+        </div>
       </div>
     </div>
   );

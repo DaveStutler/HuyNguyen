@@ -9,7 +9,7 @@ const Body = () => {
       <div className="hero-content flex-col">
         <img
           src="/profilePic2.jpg"
-          className="max-w-xl rounded-4xl shadow-2xl"
+          className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl rounded-4xl shadow-2xl"
         />
         <div>
           <h1 className="text-5xl font-bold">Hello there!</h1>

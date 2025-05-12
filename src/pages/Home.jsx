@@ -12,7 +12,6 @@ const Home = () => {
         <div ref={projectRef}>
           <Projects />
         </div>
-        <Footer />
     </div>
   );
 }
