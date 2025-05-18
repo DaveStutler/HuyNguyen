@@ -1,5 +1,4 @@
 import React from "react";
-import profile_img from "../../assets/profilePic.jpg";
 
 const Header = ({scrollToProjects}) => { 
 
@@ -7,7 +6,7 @@ const Header = ({scrollToProjects}) => {
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row gap-10">
         <img
-          src={profile_img}
+          src="/profilePic.jpg"
           alt="Profile"
           className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl rounded-xl shadow-2xl"
         />
