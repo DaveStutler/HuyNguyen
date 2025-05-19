@@ -7,6 +7,7 @@ import Porfolio from './pages/Porfolio.jsx';
 import Contact from './pages/Contact.jsx';
 import Projects from './components/service/Projects.jsx';
 import Description from './components/service/Description.jsx';
+import Hero from './components/hero/Hero.jsx';
 /**
  * @summary Main App component
  * @description This component is the main entry point of the application. 

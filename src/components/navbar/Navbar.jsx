@@ -61,6 +61,16 @@ const Navbar = () => {
     document.documentElement.setAttribute("data-theme", checked ? "dark" : "light");
   };
 
+  // Handle logo transition on scroll
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className="navbar bg-base-100 shadow-sm md:flex-nowrap">
@@ -82,17 +92,25 @@ const Navbar = () => {
       </div>
 
 
-
+      {/* Center Logo */}
       <div className="navbar-center justify-center md:w-auto">
         <Link to="/" className="btn btn-ghost p-0">
           <img
             src={logoSrc}
             alt="Logo"
-            className="w-20 h-20 md:w-20 md:h-20 rounded-full"
+            className={`w-20 h-20 md:w-20 md:h-20 rounded-full transition-all duration-700 ease-in-out ${scrolled ? "h-12" : "h-0"}`}
+            style={{
+              opacity: scrolled ? 1 : 0,
+              transform: scrolled
+                ? "translateY(0)"
+                : "translateY(-40px)",
+            }}
           />
         </Link>
       </div>
 
+
+      {/* Desktop Menu */}
       <div className="navbar-end justify-end">
         <label className="flex cursor-pointer gap-2 mr-4">
           <svg
@@ -109,7 +127,7 @@ const Navbar = () => {
             <path
               d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
           </svg>
-          <input type="checkbox" value="coffee" className="toggle theme-controller" onChange={handleThemeToggle}/>
+          <input type="checkbox" value="coffee" className="toggle theme-controller" onChange={handleThemeToggle} />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
