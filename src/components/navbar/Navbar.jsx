@@ -45,6 +45,23 @@ const Navbar = () => {
     }
   };
 
+  // Center Logo
+  const [logoSrc, setLogoSrc] = useState("/Logo/1.png");
+
+  useEffect(() => {
+    // Check initial theme (optional, if you want to sync with system or saved theme)
+    const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+    setLogoSrc(isDark ? "/Logo/2.png" : "/Logo/1.png");
+  }, []);
+
+  const handleThemeToggle = (e) => {
+    const checked = e.target.checked;
+    setLogoSrc(checked ? "/Logo/2.png" : "/Logo/1.png");
+    // Optionally, set theme attribute here if you want to control theme
+    document.documentElement.setAttribute("data-theme", checked ? "dark" : "light");
+  };
+
+
   return (
     <div className="navbar bg-base-100 shadow-sm md:flex-nowrap">
       {/* Mobile menu Icon, Desktop Menu */}
@@ -64,13 +81,18 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Center Logo */}
+
+
       <div className="navbar-center justify-center md:w-auto">
-        <a className="btn btn-ghost text-2xl"><Link to='/'>Huy Nguyen</Link></a>
+        <Link to="/" className="btn btn-ghost p-0">
+          <img
+            src={logoSrc}
+            alt="Logo"
+            className="w-20 h-20 md:w-20 md:h-20 rounded-full"
+          />
+        </Link>
       </div>
 
-
-      {/* Search and Theme */}
       <div className="navbar-end justify-end">
         <label className="flex cursor-pointer gap-2 mr-4">
           <svg
@@ -87,7 +109,7 @@ const Navbar = () => {
             <path
               d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
           </svg>
-          <input type="checkbox" value="coffee" className="toggle theme-controller" />
+          <input type="checkbox" value="coffee" className="toggle theme-controller" onChange={handleThemeToggle}/>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
