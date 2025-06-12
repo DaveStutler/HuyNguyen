@@ -5,7 +5,6 @@ Welcome to my personal portfolio website! This is where I showcase my latest pro
 ## 🚀 Live Site
 
 👉 [Visit Portfolio](https://main.d1js5qcsr9ejez.amplifyapp.com/)  
-*(Replace with your actual link)*
 
 ## 🛠️ Tech Stack
 
@@ -26,5 +25,4 @@ Welcome to my personal portfolio website! This is where I showcase my latest pro
 ## 📸 Preview
 
 ![Portfolio Preview](/public/services/personalportfolio.gif)  
-*(Add a screenshot of your site here)*
 
