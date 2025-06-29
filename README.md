@@ -8,10 +8,10 @@ Welcome to my personal portfolio website! This is where I showcase my latest pro
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript, React.js (or your choice)
-- **Styling:** Tailwind CSS / SCSS / Bootstrap / Styled Components
-- **Backend:** Node.js / Express / (if applicable)
-- **Hosting:** Vercel / Netlify / GitHub Pages
+- **Frontend:** HTML, CSS, JavaScript, React.js
+- **Styling:** Tailwind CSS 
+- **Backend:** Node.js / Express  
+- **Hosting:** Amplify / GitHub Pages
 - **Version Control:** Git & GitHub
 
 ## 📁 Features
