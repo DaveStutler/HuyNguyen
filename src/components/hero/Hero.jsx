@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import  Navbar from "../navbar/Navbar";
-import logoImage from "../../public/Logo/1.png";
+import logoImage from "../../../public/Logo/1.png";
 
 export default function Hero() {
   const [scrolled, setScrolled] = useState(false);
