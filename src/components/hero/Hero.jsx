@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import  Navbar from "../navbar/Navbar";
+import logoImage from "../../assets/Logo/1.png";
 
 export default function Hero() {
   const [scrolled, setScrolled] = useState(false);
@@ -25,7 +26,7 @@ export default function Hero() {
             {/* Hero Section */}
             <section className="flex items-center justify-evenly h-screen px-10 bg-base-100">
                 <img
-                    src="/Logo/1.png"
+                    src={logoImage}
                     alt="Hero Logo"
                     className={`transition-all duration-700 ease-in-out ${scrolled ? "h-0" : "h-64"
                         }`}
