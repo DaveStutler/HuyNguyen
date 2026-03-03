@@ -26,7 +26,7 @@ const Projects = () => {
              transition-all duration-300 outline-none"
           >
             <img
-              src={project.image}
+              src={`${import.meta.env.BASE_URL}${project.image}`}
               alt={project.name}
               className="w-full h-48 object-cover rounded-lg"
             />

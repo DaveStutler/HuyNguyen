@@ -17,7 +17,7 @@ const Description = () => {
     <div className="flex justify-center px-4 py-10">
       <div className="card bg-base-100 w-full max-w-4xl shadow-xl">
         <figure>
-          <img src={project.image} alt={project.name} className="object-cover" />
+          <img src={`${import.meta.env.BASE_URL}${project.image}`} alt={project.name} className="object-cover" />
         </figure>
         <div className="card-body space-y-4">
           <h2 className="card-title text-3xl font-bold">
