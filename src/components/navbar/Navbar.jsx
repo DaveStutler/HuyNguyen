@@ -22,6 +22,8 @@ const slugify = (text) =>
 const Navbar = () => {
   const navigate = useNavigate();
   const [searchValue, setSearchValue] = useState("");
+  const logoLight = `${import.meta.env.BASE_URL}Logo/1.png`;
+  const logoDark = `${import.meta.env.BASE_URL}Logo/2.png`;
 
   const handleSearch = (e) => {
     if (e.key === 'Enter') {
@@ -46,17 +48,17 @@ const Navbar = () => {
   };
 
   // Center Logo
-  const [logoSrc, setLogoSrc] = useState(`${import.meta.env.BASE_URL}Logo/1.png`);
+  const [logoSrc, setLogoSrc] = useState(logoLight);
 
   useEffect(() => {
     // Check initial theme (optional, if you want to sync with system or saved theme)
     const isDark = document.documentElement.getAttribute("data-theme") === "dark";
-    setLogoSrc(isDark ? `${import.meta.env.BASE_URL}Logo/2.png` : `${import.meta.env.BASE_URL}Logo/1.png`);
+    setLogoSrc(isDark ? logoDark : logoLight);
   }, []);
 
   const handleThemeToggle = (e) => {
     const checked = e.target.checked;
-    setLogoSrc(checked ? `${import.meta.env.BASE_URL}Logo/2.png` : `${import.meta.env.BASE_URL}Logo/1.png`);
+    setLogoSrc(checked ? logoDark : logoLight);
     // Optionally, set theme attribute here if you want to control theme
     document.documentElement.setAttribute("data-theme", checked ? "dark" : "light");
   };
