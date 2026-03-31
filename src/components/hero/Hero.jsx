@@ -16,6 +16,12 @@ export default function Hero() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const [logoSrc, setLogoSrc] = useState(logoLight);
+  useEffect(() => {
+      // Check initial theme (optional, if you want to sync with system or saved theme)
+      const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+      setLogoSrc(isDark ? logoDark : logoLight);
+    }, []);
 
     return (
         <div>
@@ -27,7 +33,7 @@ export default function Hero() {
             {/* Hero Section */}
             <section className="flex items-center justify-evenly h-screen px-10 bg-base-100">
                 <img
-                    src={scrolled ? logoDark : logoLight}
+                    src={logoSrc}
                     alt="Hero Logo"
                     className={`transition-all duration-700 ease-in-out ${scrolled ? "h-0" : "h-64"
                         }`}
