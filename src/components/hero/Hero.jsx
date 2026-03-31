@@ -17,11 +17,18 @@ export default function Hero() {
   }, []);
 
   const [logoSrc, setLogoSrc] = useState(logoLight);
-  useEffect(() => {
+  const handleThemeToggle = (e) => {
+    const checked = e.target.checked;
+    setLogoSrc(checked ? logoDark : logoLight);
+  }
+
+  
+    useEffect(() => {
       // Check initial theme (optional, if you want to sync with system or saved theme)
       const isDark = document.documentElement.getAttribute("data-theme") === "dark";
       setLogoSrc(isDark ? logoDark : logoLight);
     }, []);
+
 
     return (
         <div>
