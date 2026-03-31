@@ -4,6 +4,8 @@ import  Navbar from "../navbar/Navbar";
 
 export default function Hero() {
   const [scrolled, setScrolled] = useState(false);
+  const logoLight = `${import.meta.env.BASE_URL}Logo/1.png`;
+  const logoDark = `${import.meta.env.BASE_URL}Logo/2.png`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +27,7 @@ export default function Hero() {
             {/* Hero Section */}
             <section className="flex items-center justify-evenly h-screen px-10 bg-base-100">
                 <img
-                    src={`${import.meta.env.BASE_URL}Logo/1.png`}
+                    src={scrolled ? logoDark : logoLight}
                     alt="Hero Logo"
                     className={`transition-all duration-700 ease-in-out ${scrolled ? "h-0" : "h-64"
                         }`}
