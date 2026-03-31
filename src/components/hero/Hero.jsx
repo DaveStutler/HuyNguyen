@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import  Navbar from "../navbar/Navbar";
 
 export default function Hero() {
   const [scrolled, setScrolled] = useState(false);
   const logoLight = `${import.meta.env.BASE_URL}Logo/1.png`;
   const logoDark = `${import.meta.env.BASE_URL}Logo/2.png`;
+  const [logoSrc, setLogoSrc] = useState(logoLight);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,18 +16,23 @@ export default function Hero() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const [logoSrc, setLogoSrc] = useState(logoLight);
-  const handleThemeToggle = (e) => {
-    const checked = e.target.checked;
-    setLogoSrc(checked ? logoDark : logoLight);
-  }
-
-  
-    useEffect(() => {
-      // Check initial theme (optional, if you want to sync with system or saved theme)
+  useEffect(() => {
+    const updateLogoFromTheme = () => {
       const isDark = document.documentElement.getAttribute("data-theme") === "dark";
       setLogoSrc(isDark ? logoDark : logoLight);
-    }, []);
+    };
+
+    updateLogoFromTheme();
+
+    // React to theme changes made by Navbar toggle.
+    const observer = new MutationObserver(updateLogoFromTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+
+    return () => observer.disconnect();
+  }, [logoDark, logoLight]);
 
 
     return (
