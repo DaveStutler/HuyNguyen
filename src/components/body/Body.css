@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap');
+
+.skill-chip {
+    transition: transform 0.25s ease, background 0.25s ease;
+    cursor: default;
+}
+
+.skill-chip:hover {
+    transform: translateY(-2px) scale(1.04);
+}
+
+.stat-card {
+    transition: border-color 0.25s ease;
+}
+
+.stat-card:hover {
+    border-color: rgba(245, 200, 66, 0.3) !important;
+}
