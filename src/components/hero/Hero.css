@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ── Keyframes ─────────────────────────────────────────────── */
+@keyframes floatDrift {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes revealBar {
+  from { width: 0; }
+  to   { width: 64px; }
+}
+
+/* ── Animation utility classes ─────────────────────────────── */
+/* Each starts invisible and animates in — fill-mode keeps final state */
+.anim-slideup {
+  opacity: 0;
+  animation: slideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.anim-slideleft {
+  opacity: 0;
+  animation: slideLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.anim-scalein {
+  opacity: 0;
+  animation: scaleIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.anim-fadein {
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* ── Typography ─────────────────────────────────────────────── */
+.hero-name {
+  font-family: 'Playfair Display', serif;
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+}
+
+.hero-body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── Photo card hover ───────────────────────────────────────── */
+.photo-card {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.photo-card:hover {
+  transform: scale(1.02) rotate(-0.5deg);
+}
+
+/* ── CTA button ─────────────────────────────────────────────── */
+.cta-btn {
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.25s ease;
+}
+
+.cta-btn:hover {
+  background: #1a1a1a !important;
+  color: #f5c842 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* ── Noise texture overlay ──────────────────────────────────── */
+.noise-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
