@@ -106,11 +106,11 @@ export default function Hero() {
         <div className="relative z-20 flex justify-center md:justify-end items-end order-1 md:order-2 pt-8 md:pt-0">
 
           {/* Floating skill tags — z-30 in FloatingTag, so they always render above the card */}
-          <FloatingTag label="Unity / Unreal"  style={{ top: "10%",   left: "0%" }}   delay="0.8s" />
+          <FloatingTag label="Unity · Unreal"  style={{ top: "10%",   left: "0%" }}   delay="0.8s" />
           <FloatingTag label="React · Node"    style={{ top: "32%",   right: "2%" }}  delay="1.2s" />
           <FloatingTag label="AWS · GCP"       style={{ bottom: "28%", left: "5%" }}  delay="1.6s" />
           <FloatingTag label="C++ · Python"    style={{ bottom: "10%", right: "0%" }} delay="2s"   />
-
+          <FloatingTag label="Boxing"          style={{ top: "50%",  left: "-5%" }} delay="2.4s" />
           {/* Photo card */}
           <div
             className="photo-card anim-scalein relative"
