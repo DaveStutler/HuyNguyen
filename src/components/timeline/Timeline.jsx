@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 
 // ── Timeline data ─────────────────────────────────────────────────────────────
 // Add your images to /public/timeline/ and update the src paths below.
@@ -68,7 +69,7 @@ const events = [
     year: '2024',
     title: 'Admitted to USC',
     tag: 'Education',
-    tagColor: '#f5c842',
+    tagColor: '#4ade80',
     description:
       'Began M.S. in Computer Science (Game Development) at the University of Southern California. Honing skills in game design and development.',
     photos: [
@@ -78,6 +79,35 @@ const events = [
       { src: 'timeline/usc/uscBoxing.jpg', caption: 'USC Boxing' },
       { src: 'timeline/usc/award.jpeg', caption: 'Friends' },
       { src: 'timeline/usc/design.jpg', caption: 'Game Lab' },
+    ],
+  },
+  {
+    year: '2026',
+    title: 'Dim Biryani',
+    tag: 'Acting',
+    tagColor: '#60a5fa',
+    description:
+      'Ventured into acting, landing a role in the indie film "Dim Biryani" directed by the talented filmmaker, Sumeer Malik. With rising actors like Sophie Liu David and Yan Cui, the film explores themes of love and family, and I am excited to bring my character to life on screen.',
+    photos: [
+      { src: 'timeline/usc/halloween.jpg', caption: 'Behind the Scenes' },
+      { src: 'timeline/usc/jackass.jpg', caption: 'It\'s a Wrap!' },
+      { src: 'timeline/usc/newPeers.jpg', caption: 'Outtakes' },
+    ],
+  },
+  {
+    year: '2024-Present',
+    title: 'Design, Build, Repeat',
+    tag: 'Project',
+    tagColor: '#f5c842',
+    description:
+      'Continuing to design and build game prototypes in Unity and Unreal, even board games. Exploring narrative design, procedural generation, multiplayer tracking & systems.',
+    photos: [
+      { src: 'timeline/usc/halloween.jpg', caption: '1st Successful Board Game, Gorrila Getaway' },
+      { src: 'timeline/usc/jackass.jpg', caption: 'Gorrila Getaway Presentation, praised by veteran game designer, Richard Lemarchand' },
+      { src: 'timeline/usc/newPeers.jpg', caption: '2D RTS Game: Rivalry Clash, inspired by classic strategy games like Clash Royale' },
+      { src: 'timeline/usc/uscBoxing.jpg', caption: '2D Cooking Game: Order Up!, inspired by classic mobile cooking games' },
+      { src: 'timeline/usc/award.jpeg', caption: 'Order Up Presentation' },
+      { src: 'timeline/usc/design.jpg', caption: 'Outtakes' },
     ],
   },
 ];
@@ -109,8 +139,13 @@ function Lightbox({ photos, startIndex, onClose }) {
   }, [onClose, prev, next]);
 
   useEffect(() => {
+    // Lock scroll on BOTH html and body — needed for some browsers/OS combos
     document.body.style.overflow = 'hidden';
-    return () => { document.body.style.overflow = ''; };
+    document.documentElement.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+    };
   }, []);
 
   const photo = photos[current];
@@ -119,8 +154,8 @@ function Lightbox({ photos, startIndex, onClose }) {
     background: 'rgba(255,255,255,0.08)',
     border: '1px solid rgba(255,255,255,0.12)',
     borderRadius: '50%',
-    width: '40px',
-    height: '40px',
+    width: '44px',
+    height: '44px',
     color: '#f5f5f0',
     fontSize: '16px',
     cursor: 'pointer',
@@ -131,13 +166,16 @@ function Lightbox({ photos, startIndex, onClose }) {
     transition: 'background 0.2s',
   };
 
-  return (
+  // ── Rendered into document.body via portal so it escapes any ancestor
+  //    stacking context created by transform/opacity on TimelineEntry ──────────
+  return createPortal(
     <div
       onClick={onClose}
       style={{
         position: 'fixed',
         inset: 0,
-        zIndex: 9999,
+        // High enough to beat the navbar (z-50 = 50) and any other element
+        zIndex: 99999,
         background: 'rgba(8,8,8,0.93)',
         backdropFilter: 'blur(10px)',
         WebkitBackdropFilter: 'blur(10px)',
@@ -145,52 +183,61 @@ function Lightbox({ photos, startIndex, onClose }) {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '24px',
+        // Vertical padding: 72px top (clears fixed navbar ~70px) + 24px bottom
+        padding: '72px 24px 24px',
         animation: 'lbFadeIn 0.2s ease forwards',
+        boxSizing: 'border-box',
       }}
     >
-      {/* ── Close ── */}
+      {/* ── Close button — sits just below the navbar ── */}
       <button
         onClick={onClose}
-        style={{ ...btnStyle, position: 'absolute', top: '20px', right: '24px', fontSize: '18px' }}
-        onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.15)'}
+        style={{ ...btnStyle, position: 'absolute', top: '76px', right: '24px', fontSize: '18px' }}
+        onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.18)'}
         onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.08)'}
+        title="Close (Esc)"
       >
         ✕
       </button>
 
-      {/* ── Arrows — absolutely positioned on the overlay edges ── */}
+      {/* ── Left arrow ── */}
       {photos.length > 1 && (
         <button
           onClick={e => { e.stopPropagation(); prev(); }}
           style={{ ...btnStyle, position: 'absolute', left: '20px', top: '50%', transform: 'translateY(-50%)' }}
           onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.18)'}
           onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.08)'}
+          title="Previous"
         >
           ←
         </button>
       )}
+
+      {/* ── Right arrow ── */}
       {photos.length > 1 && (
         <button
           onClick={e => { e.stopPropagation(); next(); }}
           style={{ ...btnStyle, position: 'absolute', right: '20px', top: '50%', transform: 'translateY(-50%)' }}
           onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.18)'}
           onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.08)'}
+          title="Next"
         >
           →
         </button>
       )}
 
-      {/* ── Image — constrained by both axes so any aspect ratio fits ── */}
+      {/* ── Image ── */}
       <div
         onClick={e => e.stopPropagation()}
         style={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          /* Leave room for the absolute arrows (40px btn + 20px gap each side) */
+          // Subtract arrow widths (80px each side) from available width
           width: 'calc(100vw - 160px)',
-          maxWidth: '860px',
+          maxWidth: '820px',
+          // Max height = viewport minus top padding (72px), caption area (~80px), bottom padding (24px)
+          maxHeight: 'calc(100vh - 176px)',
         }}
       >
         <img
@@ -198,41 +245,48 @@ function Lightbox({ photos, startIndex, onClose }) {
           src={`${import.meta.env.BASE_URL}${photo.src}`}
           alt={photo.caption || ''}
           style={{
-            /* Let the browser pick whichever dimension hits its limit first.
-               width: auto + height: auto with both max-* set is the correct
-               "contain in box" pattern — avoids the stretch that width:100% causes
-               on portrait images. */
             width: 'auto',
             height: 'auto',
             maxWidth: '100%',
-            maxHeight: '72vh',
+            maxHeight: 'calc(100vh - 176px)',
             borderRadius: '10px',
             display: 'block',
             background: '#181817',
             animation: 'lbSlideUp 0.22s ease forwards',
           }}
           onError={e => {
-            e.currentTarget.style.width = '100%';
-            e.currentTarget.style.minHeight = '260px';
+            e.currentTarget.style.width = '300px';
+            e.currentTarget.style.minHeight = '200px';
           }}
         />
       </div>
 
       {/* ── Caption + counter ── */}
-      <div onClick={e => e.stopPropagation()} style={{ marginTop: '14px', textAlign: 'center' }}>
+      <div onClick={e => e.stopPropagation()} style={{ marginTop: '12px', textAlign: 'center' }}>
         {photo.caption && (
-          <p style={{ color: 'rgba(245,245,240,0.65)', fontSize: '0.9rem', fontFamily: "'DM Sans',sans-serif", marginBottom: '6px' }}>
+          <p style={{
+            color: 'rgba(245,245,240,0.7)',
+            fontSize: '0.9rem',
+            fontFamily: "'DM Sans', sans-serif",
+            marginBottom: '4px',
+          }}>
             {photo.caption}
           </p>
         )}
-        <p style={{ color: 'rgba(245,245,240,0.28)', fontSize: '0.72rem', letterSpacing: '0.1em', fontFamily: "'DM Sans',sans-serif" }}>
+        <p style={{
+          color: 'rgba(245,245,240,0.28)',
+          fontSize: '0.72rem',
+          letterSpacing: '0.1em',
+          fontFamily: "'DM Sans', sans-serif",
+          marginBottom: '8px',
+        }}>
           {current + 1} / {photos.length}
         </p>
       </div>
 
       {/* ── Dot navigation ── */}
       {photos.length > 1 && (
-        <div onClick={e => e.stopPropagation()} style={{ display: 'flex', gap: '6px', marginTop: '12px' }}>
+        <div onClick={e => e.stopPropagation()} style={{ display: 'flex', gap: '6px', marginBottom: '10px' }}>
           {photos.map((_, i) => (
             <button
               key={i}
@@ -251,7 +305,21 @@ function Lightbox({ photos, startIndex, onClose }) {
           ))}
         </div>
       )}
-    </div>
+
+      {/* ── Dismiss hint ── */}
+      <p style={{
+        color: 'rgba(245,245,240,0.2)',
+        fontSize: '11px',
+        letterSpacing: '0.12em',
+        fontFamily: "'DM Sans', sans-serif",
+        textTransform: 'uppercase',
+        userSelect: 'none',
+      }}>
+        Esc to close · click outside to dismiss
+        {photos.length > 1 && ' · ← → to navigate'}
+      </p>
+    </div>,
+    document.body   // ← escapes stacking context of TimelineEntry
   );
 }
 
