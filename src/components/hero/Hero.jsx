@@ -151,7 +151,7 @@ export default function Hero() {
               className="anim-fadein absolute bottom-5 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full bg-black/70 backdrop-blur-sm text-white text-xs font-medium whitespace-nowrap"
               style={{ animationDelay: "1s" }}
             >
-              Master's student @ USC · Class of '25
+              Master's student @ USC · Class of '26
             </div>
           </div>
         </div>
