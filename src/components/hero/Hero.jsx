@@ -37,10 +37,10 @@ export default function Hero() {
       />
 
       {/* ── MAIN CONTENT GRID ── */}
-      <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-16 pb-20 grid grid-cols-1 md:grid-cols-2 gap-0 items-end min-h-screen">
+      <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-16 pb-20 grid grid-cols-1 md:grid-cols-2 gap-0 items-start md:items-end min-h-screen">
 
         {/* ── LEFT: Typography ── */}
-        <div className="flex flex-col justify-end pb-12 md:pb-24 order-2 md:order-1">
+        <div className="flex flex-col justify-end pb-12 md:pb-24 order-2 md:order-1 pt-8 md:pt-0">
 
           {/* Status pill */}
           <div className="anim-slideup mb-6 self-start" style={{ animationDelay: "0.1s" }}>
@@ -109,7 +109,7 @@ export default function Hero() {
           <FloatingTag label="Unity · Unreal"  style={{ top: "10%",   left: "0%" }}   delay="0.8s" />
           <FloatingTag label="React · Node"    style={{ top: "32%",   right: "2%" }}  delay="1.2s" />
           <FloatingTag label="AWS · GCP"       style={{ bottom: "28%", left: "5%" }}  delay="1.6s" />
-          <FloatingTag label="C++ · Python"    style={{ bottom: "10%", right: "0%" }} delay="2s"   />
+          <FloatingTag label="C++ · Python"    style={{ bottom: "15%", right: "0%" }} delay="2s"   />
           <FloatingTag label="Boxing"          style={{ top: "50%",  left: "-5%" }} delay="2.4s" />
           {/* Photo card */}
           <div

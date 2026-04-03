@@ -105,9 +105,9 @@ const events = [
     description:
       'Ventured into acting, landing a role in the indie film "Dim Biryani" directed by the talented filmmaker, Sumeer Malik. With rising actors like Sophie Liu David and Yan Cui, the film explores themes of love and family, and I am excited to bring my character to life on screen.',
     photos: [
-      { src: 'timeline/dim-biryani/behind-the-scenes.jpg', caption: 'Behind the Scenes' },
-      { src: 'timeline/dim-biryani/its-a-wrap.jpg', caption: 'It\'s a Wrap!' },
-      { src: 'timeline/dim-biryani/outtakes.jpg', caption: 'Outtakes' },
+      { src: 'timeline/dim-biryani/behind-the-scenes.png', caption: 'Behind the Scenes' },
+      { src: 'timeline/dim-biryani/its-a-wrap.png', caption: 'It\'s a Wrap!' },
+      { src: 'timeline/dim-biryani/outtakes.png', caption: 'Outtakes' },
     ],
   },
   {

@@ -1,0 +1,64 @@
+{
+  "collaborators": [
+    {
+      "name": "Christopher Nitta",
+      "title": "Faculty · Project Administrator",
+      "affiliation": "UC Davis Computer Science",
+      "project": "Academic Genealogy Website",
+      "linkedin": "https://web.cs.ucdavis.edu/~cjnitta/",
+      "avatar": "collaborators/nitta.jpg",
+      "note": "Supervised and administered the Academic Genealogy platform for the UC Davis CS department.",
+      "notable": true
+    },
+    {
+      "name": "Ujwal Pratap Krishna",
+      "title": "Project Advisor",
+      "affiliation": "UC Davis",
+      "project": "Academic Genealogy Website",
+      "linkedin": "",
+      "avatar": "collaborators/ujwal.jpg",
+      "note": "Provided technical guidance and oversight throughout the genealogy platform build.",
+      "notable": true
+    },
+    {
+      "name": "Wenqiao Wang",
+      "title": "Game Designer",
+      "affiliation": "USC",
+      "project": "Rivalry Clash",
+      "linkedin": "",
+      "avatar": "collaborators/wenqiao.jpg",
+      "note": "Co-designed core gameplay mechanics and unit balance for Rivalry Clash.",
+      "notable": false
+    },
+    {
+      "name": "Zahira Ghazali",
+      "title": "Movement & Narrative Designer",
+      "affiliation": "UC Davis",
+      "project": "Pirates in Peril",
+      "linkedin": "",
+      "avatar": "collaborators/zahira.jpg",
+      "note": "Designed the movement systems and narrative structure for Pirates in Peril.",
+      "notable": false
+    },
+    {
+      "name": "Kyle Caldwell",
+      "title": "Lead Game Designer",
+      "affiliation": "UC Davis",
+      "project": "Gorilla Getaway",
+      "linkedin": "",
+      "avatar": "collaborators/kyle.jpg",
+      "note": "Led the design of the Gorilla Getaway board game from concept to prototype.",
+      "notable": false
+    },
+    {
+      "name": "high on gummy",
+      "title": "Programmer",
+      "affiliation": "USC",
+      "project": "Order Up!",
+      "linkedin": "",
+      "avatar": "collaborators/high.jpg",
+      "note": "dumb",
+      "notable": true
+    }
+  ]
+}
