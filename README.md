@@ -4,14 +4,15 @@ Welcome to my personal portfolio website! This is where I showcase my latest pro
 
 ## 🚀 Live Site
 
-👉 [Visit Portfolio](https://main.d1js5qcsr9ejez.amplifyapp.com/)  
+👉 [Visit Portfolio](https://davestutler.github.io/HuyNguyen/)
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript, React.js
-- **Styling:** Tailwind CSS 
-- **Backend:** Node.js / Express  
-- **Hosting:** Amplify / GitHub Pages
+- **Frontend:** React 18, React Router
+- **Styling:** Tailwind CSS v4, daisyUI
+- **Build:** Vite
+- **Hosting:** GitHub Pages
+- **Forms:** Formspree
 - **Version Control:** Git & GitHub
 
 ## 📁 Features
@@ -22,7 +23,16 @@ Welcome to my personal portfolio website! This is where I showcase my latest pro
 - 📜 Resume download link
 - 📬 Contact form integration
 
-## 📸 Preview
+## 💻 Local Development
 
-![Portfolio Preview](/public/services/personalportfolio.gif)  
+```bash
+npm install
+npm run dev      # start the dev server
+npm run build    # production build into dist/
+npm run preview  # serve the production build locally
+```
 
+## 🚢 Deployment
+
+Every push to `main` triggers `.github/workflows/deploy.yml`, which builds the
+site and publishes it to GitHub Pages. There is no manual deploy step.

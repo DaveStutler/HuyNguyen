@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Body.css';
 
 const skills = [
@@ -385,8 +386,8 @@ export default function Body() {
               >
                 Download Résumé
               </a>
-              <a
-                href="mailto:huyng38456@gmail.com"
+              <Link
+                to="/contact"
                 style={{
                   display: 'inline-block',
                   padding: '12px 28px',
@@ -411,7 +412,7 @@ export default function Body() {
                 }}
               >
                 Get in touch →
-              </a>
+              </Link>
             </div>
           </div>
         </div>

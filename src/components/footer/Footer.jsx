@@ -10,18 +10,19 @@ import { Link } from 'react-router-dom'
 const email = "huy38456@gmail.com";
 
 
-const handleCopyEmail = () => {
-  navigator.clipboard.writeText(email);
-  setTooltipText("Copied!");
-
-  setTimeout(() => {
-    setTooltipText("Gmail");
-  }, 2000); // Reset tooltip after 2 seconds
-};
-
 const Footer = () => {
   const [tooltipText, setTooltipText] = useState("Gmail, Copy Me");
-  const [appText, setAppText] = useState("");
+
+  // Lives inside the component: it calls setTooltipText, which only exists in
+  // this scope. At module scope it threw a ReferenceError on every click.
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText(email);
+    setTooltipText("Copied!");
+
+    setTimeout(() => {
+      setTooltipText("Gmail, Copy Me");
+    }, 2000); // Reset tooltip after 2 seconds
+  };
 
   return (
     // Outer div carries the full-bleed background; the inner footer is

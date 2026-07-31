@@ -66,13 +66,13 @@ const Navbar = () => {
           >
             About
           </Link>
-          <a
-            href="mailto:huyng38456@gmail.com"
+          <Link
+            to="/contact"
             className="px-5 py-2 rounded-full text-sm font-semibold bg-neutral-900 text-yellow-300 shadow-md transition-all duration-200 hover:bg-neutral-700 hover:shadow-lg"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
             Let's Talk
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
