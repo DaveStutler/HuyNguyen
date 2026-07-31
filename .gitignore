@@ -27,3 +27,9 @@ dist-ssr
 .amplify
 amplify_outputs*
 amplifyconfiguration*
+
+# Local-only dirs. Tailwind v4 auto-scans every non-gitignored file for
+# class names, so leaving these unignored injects stray utilities into the
+# bundle and makes local builds diverge from CI.
+.vite
+.claude
