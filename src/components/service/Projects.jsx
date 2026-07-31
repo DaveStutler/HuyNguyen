@@ -202,6 +202,9 @@ export default function Projects() {
           pointerEvents: 'none',
         }} />
 
+        {/* ── Centered content shell (keeps content from stretching on 4K) ── */}
+        <div className="shell" style={{ position: 'relative' }}>
+
         {/* ── Section header ── */}
         <div
           ref={headerRef}
@@ -278,6 +281,7 @@ export default function Projects() {
               visible={gridVisible}
             />
           ))}
+        </div>
         </div>
       </section>
     </>

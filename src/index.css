@@ -2,3 +2,36 @@
 @plugin "daisyui"{
   themes: all;
 }
+
+/* ── Layout shells ───────────────────────────────────────────────────────────
+ * Every section is full-bleed (background + ambient glows span the viewport),
+ * but its *content* lives inside one of these shells so it stays centered and
+ * grows with the display instead of stretching edge-to-edge on 4K monitors.
+ *
+ * The width scales with the viewport (vw) between a floor and a ceiling, and
+ * min(100%, …) makes it collapse gracefully inside the section padding on
+ * small screens.
+ *
+ *   viewport   .shell     .shell-narrow
+ *   1280px     1120px     1000px
+ *   1920px     1421px     1152px
+ *   2560px     1680px     1360px  (both capped)
+ *   3840px     1680px     1360px
+ */
+:root {
+  --shell-wide: clamp(1120px, 74vw, 1680px);
+  --shell-narrow: clamp(1000px, 60vw, 1360px);
+}
+
+.shell {
+  width: 100%;
+  max-width: min(100%, var(--shell-wide));
+  margin-inline: auto;
+}
+
+/* For text-heavy sections, where a 1680px measure would be tiring to read. */
+.shell-narrow {
+  width: 100%;
+  max-width: min(100%, var(--shell-narrow));
+  margin-inline: auto;
+}

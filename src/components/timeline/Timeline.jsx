@@ -602,6 +602,9 @@ export default function Timeline() {
         <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '400px', height: '400px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(245,200,66,0.05) 0%, transparent 70%)', pointerEvents: 'none' }} />
         <div style={{ position: 'absolute', bottom: '10%', left: '-5%', width: '300px', height: '300px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(96,165,250,0.04) 0%, transparent 70%)', pointerEvents: 'none' }} />
 
+        {/* ── Centered content shell (keeps content from stretching on 4K) ── */}
+        <div className="shell-narrow" style={{ position: 'relative' }}>
+
         {/* Header */}
         <div ref={titleRef} style={{
           marginBottom: 'clamp(48px, 8vw, 96px)',
@@ -629,6 +632,7 @@ export default function Timeline() {
           {events.map((event, i) => (
             <TimelineEntry key={i} event={event} index={i} />
           ))}
+        </div>
         </div>
       </section>
     </>

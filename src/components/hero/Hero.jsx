@@ -23,7 +23,7 @@ export default function Hero() {
 
   return (
     <section
-      className="hero-body relative overflow-hidden noise-overlay pt-20"
+      className="hero-body relative overflow-hidden noise-overlay min-h-screen flex items-center pt-24 pb-28"
       style={{ background: "linear-gradient(135deg, #f7e96b 0%, #f5c842 40%, #f0a800 100%)" }}
     >
       {/* ── Background geometric accents ── */}
@@ -37,10 +37,13 @@ export default function Hero() {
       />
 
       {/* ── MAIN CONTENT GRID ── */}
-      <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-16 pb-20 grid grid-cols-1 md:grid-cols-2 gap-0 items-start md:items-end min-h-screen">
+      {/* The section is the full-bleed canvas; `shell` centers the content and
+          `items-center` keeps it vertically centered on tall (4K) displays
+          instead of sinking to the bottom of the viewport. */}
+      <div className="shell relative z-10 px-8 md:px-16 grid grid-cols-1 md:grid-cols-2 gap-0 items-start md:items-center">
 
         {/* ── LEFT: Typography ── */}
-        <div className="flex flex-col justify-end pb-12 md:pb-24 order-2 md:order-1 pt-8 md:pt-0">
+        <div className="flex flex-col justify-center pb-12 md:pb-0 order-2 md:order-1 pt-8 md:pt-0">
 
           {/* Status pill */}
           <div className="anim-slideup mb-6 self-start" style={{ animationDelay: "0.1s" }}>
@@ -53,7 +56,7 @@ export default function Hero() {
           {/* Name */}
           <h1
             className="hero-name anim-slideup text-neutral-900"
-            style={{ animationDelay: "0.2s", fontSize: "clamp(3.5rem, 8vw, 7rem)" }}
+            style={{ animationDelay: "0.2s", fontSize: "clamp(3.5rem, 8vw, 8rem)" }}
           >
             Huy<br />
             <em style={{ color: "#1a1a1a" }}>Nguyen</em>
@@ -77,7 +80,7 @@ export default function Hero() {
 
           {/* Bio blurb */}
           <p
-            className="anim-slideup mt-6 text-neutral-700 leading-relaxed max-w-sm"
+            className="anim-slideup mt-6 text-neutral-700 leading-relaxed max-w-sm xl:max-w-md"
             style={{ animationDelay: "0.45s", fontSize: "1rem" }}
           >
             Building game-driven and web-driven experiences with creativity,
@@ -103,7 +106,7 @@ export default function Hero() {
 
         {/* ── RIGHT: Photo ── */}
         {/* z-20 on this container keeps it above the section bg but below tags (z-30) */}
-        <div className="relative z-20 flex justify-center md:justify-end items-end order-1 md:order-2 pt-8 md:pt-0">
+        <div className="relative z-20 flex justify-center md:justify-end items-center order-1 md:order-2 pt-8 md:pt-0">
 
           {/* Floating skill tags — z-30 in FloatingTag, so they always render above the card */}
           <FloatingTag label="Unity · Unreal"  style={{ top: "10%",   left: "0%" }}   delay="0.8s" />
@@ -114,7 +117,7 @@ export default function Hero() {
           {/* Photo card */}
           <div
             className="photo-card anim-scalein relative"
-            style={{ animationDelay: "0.25s", width: "clamp(260px, 40vw, 480px)" }}
+            style={{ animationDelay: "0.25s", width: "clamp(260px, 36vw, 560px)" }}
           >
             {/* Offset shadow behind card */}
             <div

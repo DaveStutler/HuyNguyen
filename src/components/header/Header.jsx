@@ -239,6 +239,9 @@ export default function Header({ scrollToProjects }) {
           pointerEvents: 'none',
         }} />
 
+        {/* ── Centered content shell (keeps content from stretching on 4K) ── */}
+        <div className="shell" style={{ position: 'relative' }}>
+
         {/* ── Headline block ── */}
         <div
           ref={headlineRef}
@@ -371,6 +374,7 @@ export default function Header({ scrollToProjects }) {
           </p>
         </div>
 
+        </div>
       </section>
     </>
   );

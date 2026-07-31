@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-16 py-5 transition-all duration-300"
+      className="fixed top-0 left-0 right-0 z-50 px-8 md:px-16 py-5 transition-all duration-300"
       style={{
         background: isTransparent
           ? "transparent"
@@ -40,35 +40,40 @@ const Navbar = () => {
         fontFamily: "'DM Sans', sans-serif",
       }}
     >
-      {/* Logo / wordmark */}
-      <span
-        className="font-bold text-lg tracking-tight text-neutral-900"
-        style={{ fontFamily: "'Playfair Display', serif", fontStyle: "italic" }}
-      >
-        Huy.
-      </span>
+      {/* Shell keeps the bar aligned with the hero/section content on wide displays */}
+      <div className="shell flex items-center justify-between">
+        {/* Logo / wordmark — doubles as the "go home" link */}
+        <Link
+          to="/"
+          aria-label="Huy Nguyen — back to home"
+          className="font-bold text-lg tracking-tight text-neutral-900 transition-opacity duration-200 hover:opacity-60"
+          style={{ fontFamily: "'Playfair Display', serif", fontStyle: "italic" }}
+        >
+          Huy.
+        </Link>
 
-      {/* Nav links */}
-      <div className="flex items-center gap-8">
-        <Link
-          to="/porfolio"
-          className="text-sm font-medium text-neutral-800 hover:text-neutral-500 transition-colors"
-        >
-          Projects
-        </Link>
-        <Link
-          to="/about"
-          className="text-sm font-medium text-neutral-800 hover:text-neutral-500 transition-colors"
-        >
-          About
-        </Link>
-        <a
-          href="mailto:huyng38456@gmail.com"
-          className="px-5 py-2 rounded-full text-sm font-semibold bg-neutral-900 text-yellow-300 shadow-md transition-all duration-200 hover:bg-neutral-700 hover:shadow-lg"
-          style={{ fontFamily: "'DM Sans', sans-serif" }}
-        >
-          Let's Talk
-        </a>
+        {/* Nav links */}
+        <div className="flex items-center gap-8">
+          <Link
+            to="/porfolio"
+            className="text-sm font-medium text-neutral-800 hover:text-neutral-500 transition-colors"
+          >
+            Projects
+          </Link>
+          <Link
+            to="/about"
+            className="text-sm font-medium text-neutral-800 hover:text-neutral-500 transition-colors"
+          >
+            About
+          </Link>
+          <a
+            href="mailto:huyng38456@gmail.com"
+            className="px-5 py-2 rounded-full text-sm font-semibold bg-neutral-900 text-yellow-300 shadow-md transition-all duration-200 hover:bg-neutral-700 hover:shadow-lg"
+            style={{ fontFamily: "'DM Sans', sans-serif" }}
+          >
+            Let's Talk
+          </a>
+        </div>
       </div>
     </nav>
   );

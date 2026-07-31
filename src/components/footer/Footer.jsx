@@ -24,7 +24,10 @@ const Footer = () => {
   const [appText, setAppText] = useState("");
 
   return (
-    <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
+    // Outer div carries the full-bleed background; the inner footer is
+    // centered by `shell` so it doesn't stretch across a 4K display.
+    <div className="bg-neutral text-neutral-content">
+    <footer className="shell footer sm:footer-horizontal p-10">
       <aside>
         <SmilePlus
           width="50"
@@ -64,6 +67,7 @@ const Footer = () => {
         </div>
       </nav>
     </footer>
+    </div>
   )
 }
 

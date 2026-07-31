@@ -66,6 +66,12 @@ export default function Body() {
           pointerEvents: 'none',
         }} />
 
+        {/* ── Centered content shell ──
+            The section stays full-bleed (background + glows), but everything
+            readable sits in a shell that grows with the viewport and stays
+            centered on ultra-wide displays. */}
+        <div className="shell-narrow" style={{ position: 'relative' }}>
+
         {/* ── Section eyebrow ── */}
         <div style={{ marginBottom: 'clamp(40px, 6vw, 72px)' }}>
           <p style={{
@@ -123,19 +129,21 @@ export default function Body() {
           gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
           gap: 'clamp(40px, 6vw, 80px)',
           alignItems: 'start',
-          maxWidth: '1100px',
         }}>
 
           {/* ── LEFT: Photo ── */}
           <div
             ref={photoRef}
             style={{
+              maxWidth: '480px',
               opacity: photoVisible ? 1 : 0,
               transform: photoVisible ? 'translateX(0)' : 'translateX(-40px)',
               transition: 'opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1)',
             }}
           >
-            <div style={{ position: 'relative', display: 'inline-block', width: '100%' }}>
+            {/* maxWidth lives on the wrapper (not the img) so the offset shadow
+                card behind it, which is inset:0, stays the same size as the photo */}
+            <div style={{ position: 'relative', display: 'block', width: '100%', maxWidth: '480px' }}>
 
               {/* Offset shadow card */}
               <div style={{
@@ -156,7 +164,7 @@ export default function Body() {
                   position: 'relative',
                   zIndex: 1,
                   width: '100%',
-                  maxWidth: '440px',
+                  maxWidth: '100%',
                   aspectRatio: '4/5',
                   objectFit: 'cover',
                   objectPosition: 'top center',
@@ -406,6 +414,7 @@ export default function Body() {
               </a>
             </div>
           </div>
+        </div>
         </div>
       </section>
     </>
