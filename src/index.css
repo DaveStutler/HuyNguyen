@@ -1,4 +1,11 @@
 @import "tailwindcss";
+
+/* Tailwind v4 auto-scans every non-gitignored file in the project for class
+ * names, including YAML. Without this, tokens in .github/workflows/deploy.yml
+ * ("group", "contents", "read", "cache", …) are detected as utilities and
+ * compiled into the production bundle — measured at +4.1 kB (+0.8 kB gzip). */
+@source not "../.github";
+
 @plugin "daisyui"{
   themes: all;
 }
